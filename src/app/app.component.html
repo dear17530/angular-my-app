@@ -1,3 +1,4 @@
 <div>hello</div>
-<input type="text" />
+<!-- 使用 [(ngModel)] 必須引入 FormsModule -->
+<input type="text" [(ngModel)]="item" placeholder="請輸入代辦事項" />
 <button (click)="add()">add</button>
