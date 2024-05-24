@@ -1,4 +1,20 @@
-<div>hello</div>
+<div>TODO</div>
 <!-- 使用 [(ngModel)] 必須引入 FormsModule -->
 <input type="text" [(ngModel)]="item" placeholder="請輸入代辦事項" />
 <button (click)="add()">add</button>
+<H2>List</H2>
+
+<!-- 使用 *ngFor 必須引入 CommonModule -->
+<ul>
+  <li *ngFor="let todo of list">
+    {{ todo }}
+  </li>
+</ul>
+
+<!-- Angular v17 使用 @for, 必須要有 track 值
+     無須另外引入 Module -->
+<ul>
+  @for (todo of list; track todo) {
+  <li>{{ todo }}</li>
+  }
+</ul>
